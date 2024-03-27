@@ -1,0 +1,218 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* CSS VARIABLES */
+:root {
+    --midnight-navy: #020659;
+    --deep-indigo: #020873;
+    --twilight-blue: #030A8C;
+    --azure-sky: #0D8DFB;
+    --royal-cobalt: #2104D9;
+    --cerulean-mist: #2699FB;
+    --plum-noir: #590242;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+/* BASIC STYLING */
+
+html {
+    background-color: var(--midnight-navy);
+}
+body {
+    width: 375px;
+    margin: 0 auto;
+    background-color: var(--white);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.25;
+}
+
+body div {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(to right, var(--royal-cobalt), var(--midnight-navy), var(--black));
+    color: var(--white);
+    padding: 5px 25px 20px;
+}
+
+header h1 {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin: 0 10px 10px;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 1em;
+    margin: 0 20px 0 10px;
+}
+
+/* NAV */
+
+nav {
+    background-color: var(--deep-indigo);
+    color: var(--white);
+}
+
+nav h2 {
+    display: none;
+}
+
+nav ul {
+    background-color: var(--royal-cobalt);
+    text-align: center;
+}
+
+nav li {
+    margin: 10px auto 25px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    background-color: #590242;
+    padding: 5px;
+}
+
+nav ul li:first-of-type {
+    position: absolute;
+    top: 5px; 
+    left: 110px;
+}
+
+#navheader {
+    color: var(--white);
+    font-size: 1.25em;
+    font-variant: small-caps;
+    font-weight: bold;
+    text-transform: none;
+}
+
+/* Hamburger Menu Code */
+ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+/***** Main Content *****/
+
+/* Trending Songs */
+
+
+/* Media Queries */
+
+@media screen and (min-width:834px) {
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    label span, input {
+        display: none;
+    }
+} 
