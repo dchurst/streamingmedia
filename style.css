@@ -125,7 +125,7 @@ nav li:hover {
 
 nav a {
     color: var(--white);
-    font-weight: 1em;
+    font-size: 1em;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -133,7 +133,7 @@ nav a {
 nav ul li:first-of-type {
     position: absolute;
     top: 7px; 
-    left: 110px;
+    left: 35%;
 }
 
 #navheader {
@@ -151,6 +151,7 @@ ul {
     max-height: 0;
     transition: max-height .2s ease-out;
 }
+
 label {
     cursor: pointer;
     display: inline-block;
@@ -158,6 +159,7 @@ label {
     position: relative;
     user-select: none;
 }
+
 label span {
     background-color: var(--white);
     display: block;
@@ -166,6 +168,7 @@ label span {
     transition: background-color .2s ease-out;
     width: 18px;
 }
+
 label span:before, label span:after {
     background: var(--white);
     content: '';
@@ -175,27 +178,35 @@ label span:before, label span:after {
     transition: all .2s ease-out;
     width: 100%;
 }
+
 label span:before {
     top: 5px;
 }
+
 label span:after {
     top: -5px;
 }
+
 input {
     display: none;
 }
+
 input:checked ~ ul {
     max-height: 500px;
 }
+
 input:checked ~ label span {
     background: transparent;
 }
+
 input:checked ~ label span:before {
     transform: rotate(-45deg);
 }
+
 input:checked ~ label span:after {
     transform: rotate(45deg);
 }
+
 input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
     top: 0;
 }
@@ -216,6 +227,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     color: var(--maroon);
     font-size: 1em;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .grid-layout {
@@ -386,8 +398,8 @@ audio::-webkit-media-controls-enclosure {
 
 footer p{
     text-align: center;
-    padding-bottom: 10px;
-    margin-top: 50px;
+    padding-bottom: 20px;
+    margin: 50px;
     color: var(--maroon);
 }
 
@@ -428,11 +440,13 @@ footer p{
     }
 
     #curated, #playlists {
+        margin-bottom: 50px;
         width: 50%;
     }
 
     #playlists {
         float: left;
+        margin-top: 52px;
     }
 
     #curated {
@@ -450,7 +464,6 @@ footer p{
     #playlists h3, #curated h3 {
         color: var(--white);
         float: right;
-        margin-right: 9%;
     }
 
     #playlists p, #curated p{
@@ -463,6 +476,7 @@ footer p{
     }
 
     button {
-        
+        float: right;
+        margin: 10px;
     }
 } 
