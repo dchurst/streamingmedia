@@ -48,21 +48,22 @@ table {
 
 /* CSS VARIABLES */
 :root {
-    --midnight-navy: #020659;
-    --deep-indigo: #020873;
-    --twilight-blue: #030A8C;
-    --azure-sky: #0D8DFB;
-    --royal-cobalt: #2104D9;
-    --cerulean-mist: #2699FB;
-    --plum-noir: #590242;
+    --darkest-blue: #020659;
+    --dark-blue: #020873;
+    --reg-blue: #030A8C;
+    --royal-blue: #2104D9;
+    --sky-blue: #0D8DFB;
+    --light-blue: #2699FB;
+    --maroon: #590242;
     --white: #ffffff;
+    --light-grey: #FFFFFFBF;
     --black: #000000;
 }
 
 /* BASIC STYLING */
 
 html {
-    background-color: var(--midnight-navy);
+    background-color: var(--darkest-blue);
 }
 body {
     width: 375px;
@@ -72,7 +73,7 @@ body {
     line-height: 1.25;
 }
 
-body div {
+#header {
     display: flex;
     flex-direction: column-reverse;
 }
@@ -80,7 +81,7 @@ body div {
 /* HEADER */
 
 header {
-    background: linear-gradient(to right, var(--royal-cobalt), var(--midnight-navy), var(--black));
+    background: linear-gradient(to right, var(--royal-blue), var(--dark-blue), var(--black));
     color: var(--white);
     padding: 5px 25px 20px;
 }
@@ -100,7 +101,7 @@ header p {
 /* NAV */
 
 nav {
-    background-color: var(--deep-indigo);
+    background-color: var(--dark-blue);
     color: var(--white);
 }
 
@@ -109,7 +110,7 @@ nav h2 {
 }
 
 nav ul {
-    background-color: var(--royal-cobalt);
+    background-color: var(--royal-blue);
     text-align: center;
 }
 
@@ -124,7 +125,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #590242;
+    background-color: var(--maroon);
     padding: 5px;
 }
 
@@ -143,6 +144,7 @@ nav ul li:first-of-type {
 }
 
 /* Hamburger Menu Code */
+
 ul {
     overflow: hidden;
     max-height: 0;
@@ -200,6 +202,108 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 /***** Main Content *****/
 
 /* Trending Songs */
+
+#trending h3 {
+    color: var(--maroon);
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.scroll-section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.scroll-section section {
+    margin: 10px;
+    position: relative;
+}
+
+.scroll-section div {
+    position: absolute;
+    top: 251px;
+    background-color: var(--light-grey);
+    padding: 5px;
+    height: 50px;
+    width: 350px;
+}
+
+dl {
+    color: var(--maroon); 
+    display: flex;
+    font-size: 1em;
+    margin: 10px auto 0;
+}
+
+dt {
+    font-style: italic;
+    margin-right: 5px;
+}
+
+dd {
+    margin-left: 5px;
+}
+
+audio {
+    position: absolute;
+    width: 300px;
+    height: 54px;
+    bottom: 150px;
+    left: 5px;
+}
+
+/* Webkit Scrollbar */
+
+#trending ::-webkit-scrollbar {
+    width: 15px;
+}
+
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px var(--maroon);
+}
+
+#trending ::-webkit-scrollbar-thumb {
+    background: var(--maroon);
+    border-radius: 5px;
+}
+
+#trending ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--maroon);
+}
+
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+
+}
+
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+
+}
+
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+
+}
+
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+
+}
+
+/* Webkit Audio */
+
+audio::-webkit-media-controls-mute-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(255, 255, 255, .5);
+}
 
 
 /* Media Queries */
