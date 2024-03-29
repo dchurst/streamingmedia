@@ -74,12 +74,12 @@ body {
     line-height: 1.25;
 }
 
+/* HEADER */
+
 #header {
     display: flex;
     flex-direction: column-reverse;
 }
-
-/* HEADER */
 
 header {
     background: linear-gradient(to right, var(--royal-blue), var(--dark-blue), var(--black));
@@ -89,7 +89,7 @@ header {
 
 header h1 {
     font-size: 1.25em;
-    font-weight: 600;
+    font-weight: bold;
     margin: 0 10px 10px;
     text-transform: uppercase;
 }
@@ -104,6 +104,7 @@ header p {
 nav {
     background-color: var(--dark-blue);
     color: var(--white);
+    position: relative;
 }
 
 nav h2 {
@@ -133,7 +134,7 @@ nav a {
 nav ul li:first-of-type {
     position: absolute;
     top: 7px; 
-    left: 35%;
+    left: 120px;
 }
 
 #navheader {
@@ -247,7 +248,6 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     top: 251px;
     background-color: var(--light-grey);
     padding: 5px;
-    height: 50px;
     width: 350px;
 }
 
@@ -271,7 +271,7 @@ audio {
     position: absolute;
     width: 300px;
     height: 54px;
-    bottom: 150px;
+    top: 110px;
     left: 5px;
 }
 
@@ -279,9 +279,9 @@ button {
     font-size: 1em;
     background-color: var(--maroon);
     color: var(--white);
-    padding: 5px 20px 5px 20px;
+    padding: 10px 30px;
     border-radius: 5px;
-    margin: 10px 0 20px 20px;
+    margin: 10px 5px 0 20px;
 }
 
 button:hover {
@@ -291,7 +291,7 @@ button:hover {
 /* Trending Webkit Scrollbar */
 
 #trending ::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
 }
 
 #trending ::-webkit-scrollbar-track {
@@ -397,10 +397,10 @@ audio::-webkit-media-controls-enclosure {
 /* Footer */
 
 footer p{
-    text-align: center;
-    padding-bottom: 20px;
-    margin: 50px;
     color: var(--maroon);
+    margin: 50px;
+    padding-bottom: 20px;
+    text-align: center;
 }
 
 /***** Media Queries *****/
@@ -424,7 +424,7 @@ footer p{
     nav li {
         height: 100%;
         margin: 0;
-        padding: 10px 30px 0;
+        padding: 10px 40px 0;
         width: 50%;
     }
 
@@ -446,7 +446,7 @@ footer p{
 
     #playlists {
         float: left;
-        margin-top: 52px;
+        margin-top: 62px;
     }
 
     #curated {
@@ -477,6 +477,6 @@ footer p{
 
     button {
         float: right;
-        margin: 10px;
+        margin: 10px 15px;
     }
 } 
